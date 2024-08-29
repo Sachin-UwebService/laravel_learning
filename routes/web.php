@@ -1,8 +1,10 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MyContact;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +24,8 @@ Route::get('/', function () {
 Route::get('findcity',[MyContact::class,'add_city']);
 
 Route::view('homepage','index');
+
+
+
+Route::resource('posts', PostController::class);
 
